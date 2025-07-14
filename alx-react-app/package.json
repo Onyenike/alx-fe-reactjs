@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.26.9"
+    "react": "^10.26.9"
+    " react-dom":^10.26.9"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
