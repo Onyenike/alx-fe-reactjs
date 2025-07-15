@@ -1,3 +1,4 @@
+import WelcomeMessage from '/src/WelcomeMessage'
 import { useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
@@ -17,6 +18,7 @@ export function App() {
         </a>
       </div>
       <h1>Vite + Preact</h1>
+      <WelcomeMessage />
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
