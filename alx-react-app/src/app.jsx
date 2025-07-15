@@ -1,4 +1,4 @@
-import WelcomeMessage from '/src/WelcomeMessage'
+import WelcomeMessage from '/src/components/WelcomeMessage'
 import { useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
