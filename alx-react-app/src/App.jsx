@@ -1,4 +1,5 @@
 import WelcomeMessage from '/src/components/WelcomeMessage'
+import UserProfile from '/src/components/UserProfile'
 import MainContent from '/src/components/MainContent'
 import Header from '/src/components/Header'
 import Footer from '/src/components/footer'
@@ -23,6 +24,7 @@ export function App() {
       <MainContent />
       <h1>Vite + Preact</h1>
        <WelcomeMessage />
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
