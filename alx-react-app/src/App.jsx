@@ -1,4 +1,7 @@
 import WelcomeMessage from '/src/components/WelcomeMessage'
+import MainContent from '/src/components/MainContent'
+import Header from '/src/components/Header'
+import Footer from '/src/components/footer'
 import { useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
@@ -8,6 +11,7 @@ export function App() {
 
   return (
     <>
+      <Header />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} class="logo" alt="Vite logo" />
@@ -16,6 +20,7 @@ export function App() {
           <img src={preactLogo} class="logo preact" alt="Preact logo" />
         </a>
       </div>
+      <MainContent />
       <h1>Vite + Preact</h1>
        <WelcomeMessage />
       <div class="card">
@@ -39,6 +44,7 @@ export function App() {
       <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
       </p>
+      <Footer />
     </>
   )
 }
