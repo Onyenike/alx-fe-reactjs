@@ -5,7 +5,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import { Routes, Route } from 'react-router'
+import { Routes, Route } from 'react-router-dom'
 function App() {
 
 
