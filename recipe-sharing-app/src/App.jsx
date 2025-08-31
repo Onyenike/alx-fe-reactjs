@@ -1,15 +1,29 @@
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
+import EditRecipeForm from './components/EditRecipeForm';
+import DeleteRecipe from './components/DeleteRecipeButton';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RecipeDetails from './components/RecipeDetails';
+import useRecipeStore from './components/recipeStore';
+import SearchBar from './components/SearchBar';
+import RecommendationList from './components/RecommendationsList';
+import FavoritesList from './components/FavoritesList';
 import './App.css'
 
 function App() {
-  
+ const recipe = useRecipeStore(state => state.recipe);
 
-  return (
-    <>
-    <RecipeList />  
-    <AddRecipeForm />
-    </>
+ return (
+   <Router>
+      <Routes>
+        <Route path="/" element={<><SearchBar /><AddRecipeForm /><RecipeList /></>} />
+        <Route path="/edit/:recipeId" element={<EditRecipeForm />} />
+        <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
+        <Route path="/delete/:recipeId" element={<DeleteRecipe />} />
+        <Route path="/recommend" element={<RecommendationList />} />
+        <Route path="favourite" element={<FavoritesList />} />
+      </Routes>
+    </Router>
   )
 }
 
